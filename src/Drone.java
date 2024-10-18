@@ -23,5 +23,21 @@ public class Drone {
         }
     }
 
-    // Getters et autres méthodes...
+    public String getNom() {
+        return nom;
+    }
+
+    public int getAdresseMAC() {
+        return adresseMAC;
+    }
+
+    public Case getPosition() {
+        return position;
+    }
+
+    public List<Case> getDeplacements() {
+        return deplacements;
+    }
+
+    
 }

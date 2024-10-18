@@ -15,4 +15,12 @@ class Case {
     public int getColonne() {
         return colonne;
     }
+
+    @Override
+    public String toString() {
+        return "Case{" +
+                "ligne=" + ligne +
+                ", colonne=" + colonne +
+                '}';
+    }
 }
