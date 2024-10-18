@@ -1,3 +1,3 @@
-public class DroneTerrestre {
+public class DroneTerrestre extends Drone{
 
 }
