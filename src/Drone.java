@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Drone {
-    protected String nom;
+    private String nom;
     protected int adresseMAC;
     protected Case position;
-    protected List<Case> deplacements;
+    protected ArrayList<Case> deplacements;
 
     public Drone(String nom, int adresseMAC) {
         this.nom = nom;
@@ -35,8 +35,13 @@ public class Drone {
         return position;
     }
 
-    public List<Case> getDeplacements() {
+    public ArrayList<Case> getDeplacements() {
         return deplacements;
+    }
+
+    @Override
+    public String toString() {
+        return "Drone:[nom=" + getNom() + "]";
     }
 
     

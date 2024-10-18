@@ -1,13 +1,16 @@
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.TreeSet;
 
 class Colonie {
-    private List<Drone> drones;
-    private int taille;
+    private ArrayList<Drone> drones;
+    private int tailleLigne;
+    private int tailleColonne;
 
-    public Colonie(int taille) {
+    public Colonie(int tailleLigne, int tailleColonne, Drone[] drones) {
+        this.tailleLigne = tailleLigne; 
+        this.tailleColonne = tailleColonne; 
         this.drones = new ArrayList<>();
-        this.taille = taille;
     }
 
     public void ajouterDrone(Drone d) {
@@ -18,5 +21,29 @@ class Colonie {
         drones.removeIf(drone -> drone.getNom().equals(nom));
     }
 
-   
+    public String ListerNom() {
+        TreeSet<String> sortedNames = new TreeSet<>();
+        drones.forEach(drone -> sortedNames.add(drone.getNom()));
+        sortedNames.forEach(System.out::println);
+        return sortedNames.toString();  
+            
+        
+    }
+
+    public ArrayList<Case> getDeplacements(String nom) {
+        for (Drone drone : drones) {
+            if (drone.getNom().equals(nom)) {
+                return drone.getDeplacements();
+            }
+        }
+        return new ArrayList<>();
+    }
+
+    public HashSet<Case> getOccupation() {
+        HashSet<Case> occupiedCases = new HashSet<>();
+        for (Drone drone : drones) {
+            occupiedCases.add(drone.getPosition());
+        }
+        return occupiedCases;
+    }
 }

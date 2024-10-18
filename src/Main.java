@@ -33,7 +33,7 @@ class Main {
       colo.ajouterDrone(new DroneAerien("Eve2", 22));
       colo.ajouterDrone(new DroneAerien("Eve3", 23));
   
-      System.out.println("les noms des drones sont : \n" + colo.listeNom());
+      System.out.println("les noms des drones sont : \n" + colo.ListerNom());
   
       System.out.println("les déplacements de Eve1 sont : \n "+colo.getDeplacements("Eve1"));
   
