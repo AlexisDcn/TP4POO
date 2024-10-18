@@ -41,8 +41,10 @@ public class Drone {
 
     @Override
     public String toString() {
-        return "Drone:[nom=" + getNom() + "]";
+        return "Drone [getNom()=" + getNom() + ", getAdresseMAC()=" + getAdresseMAC() + ", getPosition()="
+                + getPosition() + ", getDeplacements()=" + getDeplacements() + "]";
     }
 
+  
     
 }

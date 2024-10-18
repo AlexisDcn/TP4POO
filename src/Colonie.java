@@ -34,9 +34,12 @@ class Colonie {
         for (Drone drone : drones) {
             if (drone.getNom().equals(nom)) {
                 return drone.getDeplacements();
+                
             }
         }
-        return new ArrayList<>();
+        
+        return null;
+        
     }
 
     public HashSet<Case> getOccupation() {

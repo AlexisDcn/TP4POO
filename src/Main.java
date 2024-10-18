@@ -32,6 +32,7 @@ class Main {
       colo.ajouterDrone(new DroneTerrestre("Wall-E3", 13, 4));
       colo.ajouterDrone(new DroneAerien("Eve2", 22));
       colo.ajouterDrone(new DroneAerien("Eve3", 23));
+      colo.ajouterDrone(d3);
   
       System.out.println("les noms des drones sont : \n" + colo.ListerNom());
   
